@@ -31,14 +31,14 @@
     <![endif]-->
 
     <style>
-        /* 1. The Main BESENCLĀ Title */
-        h1, .navbar-brand {
-            font-family: 'Uncial Antiqua', serif !important;
-            text-transform: none !important;
-            letter-spacing: 2px !important;
+        /* 1. All Headers (H1 through H6) and Brand Name */
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
+            font-family: 'Lora', serif !important;
+            text-transform: none !important; /* Removes blocky all-caps */
+            font-weight: 600 !important;
         }
 
-        /* 2. The Subheader (Guardians of Hearth and Home) and body text */
+        /* 2. Specific fix for the Hero Subheader and Paragraphs */
         header.masthead p, 
         header.masthead .text-white-75,
         section p,
@@ -57,10 +57,9 @@
             letter-spacing: 1px !important;
         }
 
-        /* 4. Fix for the 'blocky' navbar look */
+        /* 4. Navbar Specific Override */
         #mainNav .navbar-nav .nav-item .nav-link {
             font-family: 'Quicksand', sans-serif !important;
-            text-transform: none !important;
-        }   
+        } 
     </style>
 </head>
