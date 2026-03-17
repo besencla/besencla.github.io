@@ -31,38 +31,35 @@
     <![endif]-->
 
     <style>
-        /* 1. All Headers - Making them larger and bolder */
-        h1, h2, h3, .navbar-brand {
+        /* 1. All Headers (H1 through H6) and Brand Name */
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
+            font-family: 'Lora', serif !important;
+            text-transform: none !important; /* Removes blocky all-caps */
+            font-weight: 600 !important;
+        }
+
+        /* 2. Specific fix for the Hero Subheader and Paragraphs */
+        header.masthead p, 
+        header.masthead .text-white-75,
+        section p,
+        .text-muted {
             font-family: 'Lora', serif !important;
             text-transform: none !important;
-            font-weight: 700 !important; /* Increased weight for "pop" */
-            color: #212529; /* Dark charcoal for high contrast */
         }
 
-        /* 2. Specific Header Sizes */
-        h2 { 
-            font-size: 2.5rem !important; /* Size for "What We Offer" */
-            margin-bottom: 1.5rem;
-        }
-        
-        h3 { 
-            font-size: 1.75rem !important; /* Size for "Safe Products" */
-            color: #00703C !important; /* A deep Celtic Green to make service titles stand out */
-        }
-
-        /* 3. The Main Hero Title (Besencla) */
-        header.masthead h1 {
-            font-size: 4.5rem !important;
-            color: #ffffff !important; /* Keep white against the background image */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Adds depth */
-        }
-
-        /* 4. Navigation & Buttons */
-        .nav-link, .btn {
+        /* 3. Navigation Links and Buttons */
+        .nav-link, 
+        .btn, 
+        button {
             font-family: 'Quicksand', sans-serif !important;
             text-transform: none !important;
             font-weight: 600 !important;
-            letter-spacing: 0.5px !important;
+            letter-spacing: 1px !important;
         }
+
+        /* 4. Navbar Specific Override */
+        #mainNav .navbar-nav .nav-item .nav-link {
+            font-family: 'Quicksand', sans-serif !important;
+        } 
     </style>
 </head>
