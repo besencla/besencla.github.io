@@ -83,23 +83,39 @@
         }
 
         .header-content-inner hr.celtic-knot {
+            /* 1. Reset & Layout */
+            display: block !important;
             border: 0 !important;
-            height: 60px !important; 
+            margin: 25px auto !important;
+            opacity: 0; /* Start invisible for the animation */
+            
+            /* 2. The Image */
             background-image: url("img/trinity.svg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            
-            /* RESPONSIVE WIDTH */
-            width: 20% !important;      /* Takes up 20% of the container width */
-            min-width: 50px !important;  /* Won't get tinier than 50px on small phones */
-            max-width: 100px !important; /* Won't get larger than 100px on big monitors */
-            
-            margin: 25px auto !important;
-            opacity: 0; /* Keeps your fade-in animation working */
-            animation: fadeInKnot 2s ease-out forwards;
-            animation-delay: 0.5s;
             filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
+
+            /* 3. Responsive Sizing */
+            height: 60px !important;
+            width: 20% !important;
+            min-width: 60px !important;
+            max-width: 100px !important;
+
+            /* 4. The Animation - Triggered on load */
+            animation: knotFadeIn 2.5s ease-out 0.8s forwards !important;
+        }
+
+        /* 5. The Keyframes (Keep these at the very bottom of your style block) */
+        @keyframes knotFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(15px) scale(0.9); /* Starts lower and slightly smaller */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1); /* Ends at natural size/position */
+            }
         }
     </style>
 </head>
