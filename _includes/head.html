@@ -83,38 +83,36 @@
         }
 
         .header-content-inner hr.celtic-knot {
-            /* 1. Reset & Layout */
             display: block !important;
             border: 0 !important;
             margin: 25px auto !important;
-            opacity: 0; /* Start invisible for the animation */
-            
-            /* 2. The Image */
             background-image: url("img/trinity.svg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
             filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
 
-            /* 3. Responsive Sizing */
-            height: 60px !important;
-            width: 20% !important;
-            min-width: 60px !important;
-            max-width: 100px !important;
+            /* --- RESPONSIVE SIZING --- */
+            /* We use 'vw' (viewport width) so it scales perfectly with the screen */
+            width: 15vw !important; 
+            min-width: 50px !important; 
+            max-width: 120px !important;
+            height: 60px !important; 
 
-            /* 4. The Animation - Triggered on load */
+            /* --- ANIMATION --- */
+            opacity: 0;
             animation: knotFadeIn 2.5s ease-out 0.8s forwards !important;
         }
 
-        /* 5. The Keyframes (Keep these at the very bottom of your style block) */
         @keyframes knotFadeIn {
             0% {
                 opacity: 0;
-                transform: translateY(15px) scale(0.9); /* Starts lower and slightly smaller */
+                /* Using only a tiny bit of movement so it doesn't break the layout */
+                transform: translateY(5px); 
             }
             100% {
                 opacity: 1;
-                transform: translateY(0) scale(1); /* Ends at natural size/position */
+                transform: translateY(0); /* Returning to 0 allows width % to work better */
             }
         }
     </style>
