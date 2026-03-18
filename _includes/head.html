@@ -85,35 +85,34 @@
         .header-content-inner hr.celtic-knot {
             display: block !important;
             border: 0 !important;
-            margin: 25px auto !important;
+            
+            /* 1. LINK HEIGHT TO WIDTH */
+            /* This creates a 'square' or 'rectangular' box that scales */
+            width: 12vw !important;        /* Scales with screen width */
+            height: 12vw !important;       /* Keeps aspect ratio 1:1 */
+            min-width: 60px !important;    /* Mobile floor */
+            min-height: 60px !important;   /* Mobile floor */
+            max-width: 100px !important;   /* Desktop ceiling */
+            max-height: 100px !important;  /* Desktop ceiling */
+            
+            /* 2. CENTER THE BOX */
+            margin: 20px auto !important;
+
+            /* 3. THE SVG */
             background-image: url("img/trinity.svg");
+            background-size: contain !important; /* Forces image to fit the box */
             background-repeat: no-repeat;
             background-position: center;
-            background-size: contain;
             filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
 
-            /* --- RESPONSIVE SIZING --- */
-            /* We use 'vw' (viewport width) so it scales perfectly with the screen */
-            width: 15vw !important; 
-            min-width: 50px !important; 
-            max-width: 120px !important;
-            height: 60px !important; 
-
-            /* --- ANIMATION --- */
+            /* 4. THE ANIMATION */
             opacity: 0;
-            animation: knotFadeIn 2.5s ease-out 0.8s forwards !important;
+            animation: knotFadeIn 2s ease-out 0.8s forwards !important;
         }
 
         @keyframes knotFadeIn {
-            0% {
-                opacity: 0;
-                /* Using only a tiny bit of movement so it doesn't break the layout */
-                transform: translateY(5px); 
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0); /* Returning to 0 allows width % to work better */
-            }
+            0% { opacity: 0; transform: scale(0.5); } /* Start small and faint */
+            100% { opacity: 1; transform: scale(1); } /* End at responsive size */
         }
     </style>
 </head>
