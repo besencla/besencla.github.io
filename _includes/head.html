@@ -69,7 +69,7 @@
             color: #ffffff !important;
             
             /* THE FOCUS BOX */
-            background-color: rgba(0, 0, 0, 0.1) !important; /* Semi-transparent black */
+            background-color: rgba(0, 0, 0, 0.05) !important; /* Semi-transparent black */
             display: inline-block; /* Ensures the box only wraps the text, not the whole screen width */
             padding: 10px 20px !important; /* Gives the text room to breathe inside the box */
             border-radius: 8px; /* Softens the corners */
@@ -80,6 +80,22 @@
             
             /* TEXT SHADOW for extra crispness */
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .header-content-inner hr.celtic-knot {
+            border: 0 !important;             /* Hides the default Bootstrap line */
+            height: 60px !important;          /* Adjust this height to fit your SVG size */
+            background-image: url("img/trinity.svg"); /* Ensure path matches your repo */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;         /* Ensures the knot doesn't get cut off */
+            width: 100% !important;
+            max-width: 80px !important;       /* Controls how wide the knot appears */
+            margin: 25px auto !important;     /* Spacing above and below */
+            opacity: 1 !important;
+            
+            /* This adds a dark "glow" behind the SVG shape so it pops against the trees */
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
         }
     </style>
 </head>
