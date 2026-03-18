@@ -83,18 +83,22 @@
         }
 
         .header-content-inner hr.celtic-knot {
-            border: 0 !important;             /* Hides the default Bootstrap line */
-            height: 60px !important;          /* Adjust this height to fit your SVG size */
-            background-image: url("img/trinity.svg"); /* Ensure path matches your repo */
+            border: 0 !important;
+            height: 60px !important; 
+            background-image: url("img/trinity.svg");
             background-repeat: no-repeat;
             background-position: center;
-            background-size: contain;         /* Ensures the knot doesn't get cut off */
-            width: 100% !important;
-            max-width: 80px !important;       /* Controls how wide the knot appears */
-            margin: 25px auto !important;     /* Spacing above and below */
-            opacity: 1 !important;
+            background-size: contain;
             
-            /* This adds a dark "glow" behind the SVG shape so it pops against the trees */
+            /* RESPONSIVE WIDTH */
+            width: 20% !important;      /* Takes up 20% of the container width */
+            min-width: 50px !important;  /* Won't get tinier than 50px on small phones */
+            max-width: 100px !important; /* Won't get larger than 100px on big monitors */
+            
+            margin: 25px auto !important;
+            opacity: 0; /* Keeps your fade-in animation working */
+            animation: fadeInKnot 2s ease-out forwards;
+            animation-delay: 0.5s;
             filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
         }
     </style>
