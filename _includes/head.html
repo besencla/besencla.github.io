@@ -61,5 +61,25 @@
         #mainNav .navbar-nav .nav-item .nav-link {
             font-family: 'Quicksand', sans-serif !important;
         } 
+
+        /* Target the specific <p> tag within the header-content-inner class */
+        .header-content-inner p {
+            font-family: 'Lora', serif !important;
+            font-weight: 700 !important; /* Bold weight makes serif fonts readable on photos */
+            color: #ffffff !important;
+            
+            /* THE FOCUS BOX */
+            background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */
+            display: inline-block; /* Ensures the box only wraps the text, not the whole screen width */
+            padding: 10px 20px !important; /* Gives the text room to breathe inside the box */
+            border-radius: 4px; /* Softens the corners */
+            
+            /* BLUR EFFECT (Optional - very modern look) */
+            backdrop-filter: blur(4px); 
+            -webkit-backdrop-filter: blur(4px);
+            
+            /* TEXT SHADOW for extra crispness */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
+        }
     </style>
 </head>
