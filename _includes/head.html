@@ -40,11 +40,17 @@
 
         /* 2. Specific fix for the Hero Subheader and Paragraphs */
         header.masthead p, 
-        header.masthead .text-white-75,
+        header.masthead .text-white,
         section p,
         .text-muted {
             font-family: 'Lora', serif !important;
             text-transform: none !important;
+        }
+
+        /* Background scrim for header image */
+        header.masthead {
+            /* The first number (0.7) is the darkness at the top, the second (0.4) is the bottom */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url("img/header-bg.jpg");
         }
 
         /* 3. Navigation Links and Buttons */
