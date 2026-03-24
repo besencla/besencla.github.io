@@ -117,10 +117,29 @@
         }
 
         .bg-primary .text-faded {
-            color: rgba(255, 255, 255, 0.9) !important; /* Slightly brighter for readability */
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
+            /* 1. Make it significantly larger */
+            font-size: 1.35rem !important; 
+            
+            /* 2. Force full brightness */
+            color: #ffffff !important; 
+            opacity: 1 !important; 
+            
+            /* 3. Improve spacing for the 'Hearth' vibe */
+            line-height: 1.7 !important;
+            margin-bottom: 40px !important;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+
+            /* 4. The secret to legibility: a soft shadow */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ensure the heading is also punchy */
+        .bg-primary .section-heading {
+            font-size: 3rem !important;
+            margin-top: 0;
+            text-transform: none; /* Keeps it feeling warm/natural rather than all caps */
         }
     </style>
 </head>
