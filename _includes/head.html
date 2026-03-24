@@ -115,5 +115,48 @@
             0% { opacity: 0; transform: scale(0.5); } /* Start small and faint */
             100% { opacity: 1; transform: scale(1); } /* End at responsive size */
         }
+
+        .typing-container {
+            display: flex;
+            justify-content: center; /* Keeps it centered */
+        }
+
+        .typing-text {
+            font-family: 'Lora', serif !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            padding: 10px 20px !important;
+            border-radius: 8px !important;
+            backdrop-filter: blur(4px);
+            
+            /* THE TYPING MAGIC */
+            display: inline-block;
+            overflow: hidden; /* Hides the letters before they are 'typed' */
+            white-space: nowrap; /* Prevents text from wrapping to a second line */
+            border-right: 3px solid #f05f40; /* The cursor color (Theme Orange) */
+            width: 0; /* Starting width */
+            
+            /* 'steps(30)' should roughly match the number of characters in your text 
+               '3s' is the duration of the typing 
+               '1.2s' is the delay to let the Trinity knot finish its fade first
+            */
+            animation: 
+                typing 3s steps(30, end) forwards,
+                blink-caret 0.75s step-end infinite;
+            animation-delay: 1.2s;
+        }
+
+        /* The typing motion */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* The blinking cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #f05f40; }
+        }
     </style>
 </head>
