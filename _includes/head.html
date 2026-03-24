@@ -117,29 +117,31 @@
         }
 
         .bg-primary .text-faded {
-            /* 1. Make it significantly larger */
-            font-size: 1.35rem !important; 
+            /* 1. Dramatic size increase */
+            font-size: 24px !important; /* Fixed large size */
             
-            /* 2. Force full brightness */
-            color: #ffffff !important; 
-            opacity: 1 !important; 
-            
-            /* 3. Improve spacing for the 'Hearth' vibe */
-            line-height: 1.7 !important;
-            margin-bottom: 40px !important;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            /* 2. Alternatively, use this for "Fluid" sizing that stays big: */
+            /* font-size: calc(18px + 1vw) !important; */
 
-            /* 4. The secret to legibility: a soft shadow */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            /* 3. Ensure color and opacity are 100% */
+            color: #ffffff !important;
+            opacity: 1 !important;
+            
+            /* 4. Increase line spacing so large text doesn't feel cramped */
+            line-height: 1.8 !important;
+            
+            /* 5. Center and constrain the width for readability */
+            max-width: 900px !important;
+            margin: 0 auto 40px auto !important;
+            
+            /* 6. High-contrast shadow to make it pop */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
         }
 
-        /* Ensure the heading is also punchy */
+        /* Also boosting the heading to match the new scale */
         .bg-primary .section-heading {
-            font-size: 3rem !important;
-            margin-top: 0;
-            text-transform: none; /* Keeps it feeling warm/natural rather than all caps */
+            font-size: 4rem !important;
+            margin-bottom: 30px !important;
         }
     </style>
 </head>
