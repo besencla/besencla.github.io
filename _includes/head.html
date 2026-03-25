@@ -116,80 +116,40 @@
             100% { opacity: 1; transform: scale(1); } /* End at responsive size */
         }
 
-        .bg-primary .text-faded {
-            /* 1. Balanced Size */
-            font-size: 20px !important; 
-            
-            /* 2. Clean, solid white */
-            color: #ffffff !important;
-            opacity: 1 !important;
-            
-            /* 3. Comfortable spacing */
-            line-height: 1.6 !important;
-            
-            /* 4. Keeps the text from stretching too wide on desktop */
-            max-width: 750px !important;
-            margin: 0 auto 30px auto !important;
-            
-            /* 5. Minimal shadow for depth */
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2) !important;
-        }
-
-        /* Adjusting the heading to be proportional */
-        .bg-primary .section-heading {
-            font-size: 2.8rem !important;
-            margin-bottom: 20px !important;
-        }
-
-        #services .service-box h3 {
-            font-family: 'Lora', serif; /* Matching your subheader */
-            font-weight: 700;
-            margin-top: 20px;
-        }
-
-        #services .service-box p {
-            font-size: 1.1rem;
-            line-height: 1.5;
-            color: #555 !important; /* Slightly darker than 'muted' for better reading */
-        }
-
-        #services .text-primary {
-            color: #f05f40 !important; /* Ensuring your specific orange is used */
-        }
-
-        /* --- 1. SERVICES SECTION (The Guardians' Work) --- */
-        #services .service-box p {
-            font-size: 20px !important;
-            line-height: 1.6 !important;
-            color: #555 !important; /* Darker gray for better contrast on white */
-            margin-top: 15px;
-        }
-
-        #services .service-box h3 {
-            font-size: 28px !important;
+        /* --- Global Section Headings (H2) --- */
+        /* This covers "Ancient Names", "What We Offer", "Secure Your Borders", and "Get In Touch" */
+        section h2.section-heading, 
+        aside.bg-dark h2, 
+        #services h2.section-heading {
             font-family: 'Lora', serif !important;
+            font-size: 32px !important; /* Unified Header Size */
+            text-transform: none !important;
+            margin-bottom: 20px !important;
+            letter-spacing: 1px;
+        }
+
+        /* --- Global Sub-Headings (H3) --- */
+        /* This covers "Curated Home" and "Digital Fortification" */
+        #services .service-box h3 {
+            font-family: 'Lora', serif !important;
+            font-size: 24px !important; /* Unified Sub-header Size */
             font-weight: 700 !important;
+            margin-top: 15px !important;
         }
 
-        /* --- 2. BLACK BAR (Secure Your Borders) --- */
-        aside.bg-dark h2 {
-            font-size: 36px !important;
-            font-family: 'Lora', serif !important;
-            margin-bottom: 20px !important;
-        }
-
-        aside.bg-dark p {
-            font-size: 22px !important; /* Slightly larger since white-on-black needs more 'weight' */
-            color: rgba(255, 255, 255, 0.95) !important;
+        /* --- Global Body Text (P) --- */
+        /* This creates a consistent reading experience across all sections */
+        section p, 
+        aside.bg-dark p, 
+        .text-faded, 
+        .text-muted {
+            font-size: 18px !important; /* Unified Body Size */
             line-height: 1.6 !important;
-            max-width: 800px !important;
-            margin: 0 auto 30px auto !important;
+            opacity: 1 !important;
         }
 
-        /* Ensure the button stays readable */
-        aside.bg-dark .btn-xl {
-            font-size: 18px !important;
-            padding: 18px 40px !important;
-        }
+        /* Specific contrast tweaks */
+        aside.bg-dark p, .bg-primary p { color: #ffffff !important; }
+        #services p, #contact p { color: #555555 !important; }
     </style>
 </head>
