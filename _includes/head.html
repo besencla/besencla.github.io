@@ -66,10 +66,16 @@
         /* Target the specific <p> tag within the header-content-inner class */
         .header-content-inner p {
             font-family: 'Lora', serif !important;
-            font-weight: 700 !important; /* Bold weight makes serif fonts readable on photos */
+            font-size: 24px !important;
+            font-style: italic;
+            font-weight: 500 !important; /* Bold weight makes serif fonts readable on photos */
             color: #ffffff !important;
             margin-bottom: 50px !important; /* Adds space where the button used to be */
             
+            /* SPACING: Helps it breathe against the background */
+                letter-spacing: 1px;
+                margin-bottom: 50px !important;
+
             /* THE FOCUS BOX */
             background-color: rgba(0, 0, 0, 0.05) !important; /* Semi-transparent black */
             display: inline-block; /* Ensures the box only wraps the text, not the whole screen width */
@@ -81,7 +87,8 @@
             -webkit-backdrop-filter: blur(4px);
             
             /* TEXT SHADOW for extra crispness */
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+/*            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;*/
         }
 
         .header-content-inner hr.celtic-knot {
