@@ -1,6 +1,8 @@
 # Site settings
 title: Besenclā
 email: info@besencla.com
+phone_us: (508) 244-2673
+phone_intl: +15082442673
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://besencla.github.io" # the base hostname & protocol for your site
